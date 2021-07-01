@@ -33,7 +33,7 @@ function PostsProviderComponent({ children }) {
   };
 
   const onTodoAdd = (newPost) => {
-    const newList = [...postsList, newPost];
+    const newList = [newPost, ...postsList];
     setPostsList(newList);
   };
 

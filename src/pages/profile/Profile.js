@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { getPosts } from '../../redux/selectors';
 import PostsList from '../../components/list/profile-list';
+import { withAuthProtected } from '../../hoc';
 
 function Profile() {
   const posts = useSelector(getPosts);
@@ -11,4 +12,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default withAuthProtected(Profile);
